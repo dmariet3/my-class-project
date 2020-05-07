@@ -107,16 +107,8 @@ body {
   font-size: 1em;
   height: 100%;
 }
-.header{
-    
 
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-
-}
-
- .wrapper {
+.header .wrapper {
 
   font-weight: 700;
   display: flex;

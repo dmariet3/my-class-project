@@ -95,55 +95,101 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
 html {
-  background-color:rgb(26, 22, 22);
+  background-color: #222;
   height: 100%;
+  width: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
-  font-size: 1em;
+  padding: 0 2em;
+  font-size: 1.25em;
   height: 100%;
+  color: #ccc;
 }
-.header{
-    
 
+header,
+footer {
+  background-color: #222;
+  height: 80px;
+  width: 100%;
+  
+}
+
+main {
+  background-color: #222;
+  height: auto;
+  width: 100%;
+  font-size: 2.5rem;
+  color:#ccc;
+  border-bottom: 1px solid #ccc;
+}
+main p{
+    background-color: #222;
+    opacity: 0.7;
+}
+header{
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-
+    justify-content: left;
+    align-items: center;
+    font-size: 5rem;
+    padding:10px;
+}
+footer,
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+footer{
+    border-top: 1px solid #ccc;
 }
 
- .wrapper {
-
-  font-weight: 700;
+#div-1,
+#div-2,
+#div-3 {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-
-.div-1, .div-2, .div-3 {
- 
-  display: flex;
-  width: 30%;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #ccc;
   line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: rgb(26, 22, 22);
-  height: 400px;
+  font-size: 1.3em;
+  
+  padding:10px;
+}
+#div-2{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    
 }
 
-.div-2{
-    border-left: 0.001em solid grey;
-    border-right: 0.001em solid grey;
-    padding-left: 1em;
-    padding-right: 1em;
+.wrapper span {
+  font-family: 'Lora', sans-serif;
+  font-size: 1em;
 }
 
+.flex-container {
+  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center, and set flex-flow to row wrap*/
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly; 
+}
+
+.flex-items {
+  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  color: #ccc;
+  line-height: 1.5em;
+  font-size: 1em;
+  width: 30%;
+  
+}
 
 /* ==========================================================================
    Helper classes
@@ -224,6 +270,23 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+@media all and (max-width: 768px) {
+    body {
+      padding: 1em;
+    }
+}
+
+@media (min-width: 1200px) {
+  #div-1,
+  #div-2{
+      
+  }
+
+  #div-3 {
+   
+  }
+}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
